@@ -14,8 +14,10 @@
 
 # How to run programm
 
-#### excute this command line to migrate model data : docker-compose run web python manage.py migrate 
+#### excute this command line to migrate model data : docker-compose run web python manage.py migrate
+#### excute this command line to create super user : docker-compose run web python manage.py createsuperuser 
 #### run programm : docker-compose up
+
 
 # Backend endpoints 
 ### User Model
