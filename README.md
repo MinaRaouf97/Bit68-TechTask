@@ -21,6 +21,6 @@
 ### User Model
 
 <pre>
-  • http://127.0.0.1:8000/api/user/register\n 
-  
+  • http://127.0.0.1:8000/api/user/register
+  ds
 </pre>
