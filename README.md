@@ -13,4 +13,6 @@
 </pre>
 
 # How to run programm
+excute this command line to migrate model data : docker-compose run web python manage.py migrate 
+run programm : docker-compose up
 
