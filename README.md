@@ -51,6 +51,7 @@ This will return JWT token if authentication done correctly
 }
 
 </pre>
+### hint in POST REQUEST MUST SEND THE JWT TOKEN AS A BREAER TOKEN 
 
 ### Products Model
 <pre>
