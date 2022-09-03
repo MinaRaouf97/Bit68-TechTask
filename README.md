@@ -7,5 +7,10 @@
 <pre>
   • Python 
   • Django
-  • PostgreSQL 
+  • PostgreSQL
+  • Docker
+  
 </pre>
+
+#How to run programm
+
