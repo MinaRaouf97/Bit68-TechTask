@@ -51,3 +51,17 @@ This will return JWT token if authentication done correctly
 }
 
 </pre>
+
+### Products Model
+<pre>
+  • http://127.0.0.1:8000/api/product/search/shoes
+[
+    {
+        "id": 3,
+        "name": "shoes",
+        "price": 100.0
+    }
+]
+
+</pre>
+
