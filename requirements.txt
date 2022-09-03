@@ -1,0 +1,6 @@
+Django==4.0.6
+django-rest-passwordreset==1.2.1
+djangorestframework==3.13.1
+psycopg2==2.9.3
+PyJWT==2.4.0
+decorator==5.1.1
