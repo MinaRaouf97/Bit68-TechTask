@@ -22,7 +22,7 @@
 
 <pre>
   • http://127.0.0.1:8000/api/user/register
-  To register new user will send and JSON body like this:
+  To register new user will send and JSON body like this with POST METHOD:
   {
     "first_name":"first name",
     "last_name":"last name",
@@ -40,7 +40,7 @@ This will return created user with the id
 </pre>
 <pre>
   • http://127.0.0.1:8000/api/user/login
-  To login new user will send and JSON body like this:
+  To login new user will send and JSON body like this with POST METHOD:
   {
     "email":"email@email.com",
     "password":"password"
@@ -55,6 +55,7 @@ This will return JWT token if authentication done correctly
 ### Products Model
 <pre>
   • http://127.0.0.1:8000/api/product/search/shoes
+  TO search for a product will send a JSON body like this with GET METHOD:
 [
     {
         "id": 3,
@@ -64,4 +65,122 @@ This will return JWT token if authentication done correctly
 ]
 
 </pre>
+
+### Cart Model
+<pre>
+  • http://127.0.0.1:8000/api/cart/additem
+  TO add to your cart will send a JSON body like this with POST METHOD:
+{
+    "cart":3,
+    "product":3,
+    "quantity":1
+}
+
+This will return the created object like this:
+{
+    "cart": 1,
+    "quantity": 2,
+    "product": 2,
+    "product_data": {
+        "id": 2,
+        "name": "chipsy",
+        "price": 5.0
+    }
+}
+
+</pre>
+
+<pre>
+  • http://127.0.0.1:8000/api/cart/additem
+  TO get your cart will request this with GET METHOD:
+
+This will return the created object like this:
+[
+    {
+        "cart": 1,
+        "quantity": 1,
+        "product": 3,
+        "product_data": {
+            "id": 3,
+            "name": "shoes",
+            "price": 100.0
+        }
+    },
+    {
+        "cart": 1,
+        "quantity": 2,
+        "product": 2,
+        "product_data": {
+            "id": 2,
+            "name": "chipsy",
+            "price": 5.0
+        }
+    }
+]
+</pre>
+
+### Order Model
+<pre>
+  •  http://127.0.0.1:8000/api/order/createorder
+  TO create order will send a request  with POST METHOD:
+  and this will return :
+{
+    "message": "order created"
+}
+
+</pre>
+<pre>
+  •  http://127.0.0.1:8000/api/order/getorders
+  TO get orders will send a request  with POST METHOD:
+  and this will return :
+[
+    {
+        "user": {
+            "id": 1,
+            "first_name": "first name",
+            "last_name": "last name",
+            "email": "email@email.com"
+        },
+        "created_at": "2022-09-02T14:30:51.493888Z",
+        "order_items": [
+            {
+                "id": 25,
+                "quantity": 1,
+                "order": 6,
+                "product": 2
+            },
+            {
+                "id": 26,
+                "quantity": 2,
+                "order": 6,
+                "product": 2
+            }
+        ]
+    },
+    {
+        "user": {
+            "id": 1,
+            "first_name": "first name",
+            "last_name": "last name",
+            "email": "email@email.com"
+        },
+        "created_at": "2022-09-03T17:16:55.794197Z",
+        "order_items": [
+            {
+                "id": 28,
+                "quantity": 1,
+                "order": 10,
+                "product": 3
+            },
+            {
+                "id": 29,
+                "quantity": 2,
+                "order": 10,
+                "product": 2
+            }
+        ]
+    }
+]
+</pre>
+
 
