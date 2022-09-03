@@ -17,3 +17,10 @@
 #### excute this command line to migrate model data : docker-compose run web python manage.py migrate 
 #### run programm : docker-compose up
 
+# Backend endpoints 
+### User Model
+
+<pre>
+  • http://127.0.0.1:8000/api/user/register\n 
+  
+</pre>
