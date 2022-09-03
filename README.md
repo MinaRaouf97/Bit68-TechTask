@@ -22,5 +22,19 @@
 
 <pre>
   • http://127.0.0.1:8000/api/user/register
-  ds
+  To register new user will send and JSON body like this:
+  {
+    "first_name":"first name",
+    "last_name":"last name",
+    "email":"email@email.com",
+    "password":"password"
+}
+This will return created user with the id 
+{
+    "id": 3,
+    "first_name": "first name",
+    "last_name": "last name",
+    "email": "email@email.com"
+}
+
 </pre>
