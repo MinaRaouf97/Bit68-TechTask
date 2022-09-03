@@ -13,6 +13,15 @@
 </pre>
 
 # How to run programm
+### In docker-compose file change database variables in this section
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=bit68-task
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mina
 
 #### excute this command line to migrate model data : docker-compose run web python manage.py migrate
 #### excute this command line to create super user : docker-compose run web python manage.py createsuperuser 
